@@ -7,9 +7,8 @@ OBJ_DIR_TREE += $(O_DIR)/tiles/ $(O_DIR)/gl_canvas/ $(O_DIR)/ftui/ \
 	$(O_DIR)/_public/gl_canvas/ $(O_DIR)/_public/gl/ \
 	$(O_DIR)/_public/ftui/templates/ $(O_DIR)/_public/ftui/ \
 	$(O_DIR)/_public/ftlua/templates/ $(O_DIR)/_public/ftlua/ \
-	$(O_DIR)/_public/ftce/ $(O_DIR)/_public/ft_xml/ \
-	$(O_DIR)/_public/ft/templates/ $(O_DIR)/_public/ft/ $(O_DIR)/_public/ \
-	$(O_DIR)/
+	$(O_DIR)/_public/ft_xml/ $(O_DIR)/_public/ft/templates/ \
+	$(O_DIR)/_public/ft/ $(O_DIR)/_public/ $(O_DIR)/
 O_FILES += $(O_DIR)/ft/assert.o $(O_DIR)/ft/padformat.o \
 	$(O_DIR)/ft_xml/srcs/XmlParser.o $(O_DIR)/ft_xml/srcs/XmlTokenizer.o \
 	$(O_DIR)/ftlua/cpp_utils.o $(O_DIR)/ftlua/push_utils.o \
@@ -34,14 +33,13 @@ PUBLIC_LINKS += $(O_DIR)/_public/ft/assert.hpp $(O_DIR)/_public/ft/Color.hpp \
 	$(O_DIR)/_public/ft/templates/Vec3.tpp \
 	$(O_DIR)/_public/ft/templates/Vec4.tpp \
 	$(O_DIR)/_public/ft_xml/XmlParser.hpp \
-	$(O_DIR)/_public/ft_xml/XmlTokenizer.hpp $(O_DIR)/_public/ftce/Array.hpp \
-	$(O_DIR)/_public/ftce/Array.tpp $(O_DIR)/_public/ftce/math.hpp \
-	$(O_DIR)/_public/ftlua/call.hpp $(O_DIR)/_public/ftlua/conversions.hpp \
-	$(O_DIR)/_public/ftlua/ftlua.hpp $(O_DIR)/_public/ftlua/KeysWrapper.hpp \
-	$(O_DIR)/_public/ftlua/light.hpp $(O_DIR)/_public/ftlua/pop.hpp \
-	$(O_DIR)/_public/ftlua/push.hpp $(O_DIR)/_public/ftlua/set.hpp \
-	$(O_DIR)/_public/ftlua/size.hpp $(O_DIR)/_public/ftlua/stackassert.hpp \
-	$(O_DIR)/_public/ftlua/types.hpp $(O_DIR)/_public/ftlua/utils.hpp \
+	$(O_DIR)/_public/ft_xml/XmlTokenizer.hpp $(O_DIR)/_public/ftlua/call.hpp \
+	$(O_DIR)/_public/ftlua/conversions.hpp $(O_DIR)/_public/ftlua/ftlua.hpp \
+	$(O_DIR)/_public/ftlua/KeysWrapper.hpp $(O_DIR)/_public/ftlua/light.hpp \
+	$(O_DIR)/_public/ftlua/pop.hpp $(O_DIR)/_public/ftlua/push.hpp \
+	$(O_DIR)/_public/ftlua/set.hpp $(O_DIR)/_public/ftlua/size.hpp \
+	$(O_DIR)/_public/ftlua/stackassert.hpp $(O_DIR)/_public/ftlua/types.hpp \
+	$(O_DIR)/_public/ftlua/utils.hpp \
 	$(O_DIR)/_public/ftlua/templates/ftlua_handler.tpp \
 	$(O_DIR)/_public/ftui/AbsoluteLayout.hpp $(O_DIR)/_public/ftui/ACanvas.hpp \
 	$(O_DIR)/_public/ftui/Activity.hpp $(O_DIR)/_public/ftui/ALayout.hpp \
@@ -113,8 +111,6 @@ $(O_DIR)/ft_xml/srcs/XmlTokenizer.o: ft_xml/srcs/XmlTokenizer.cpp \
 	ft/public/templates/Vec2.tpp ft/public/templates/Vec3.tpp \
 	ft/public/templates/Vec4.tpp ft/public/type_traits.hpp ft/public/utils.hpp \
 	ft_xml/public/XmlTokenizer.hpp
-
-# module ftce::ftce
 
 # module ftlua::ftlua
 $(O_DIR)/ftlua/cpp_utils.o: ftlua/cpp_utils.cpp ft/public/Rect.hpp \
@@ -597,9 +593,6 @@ $(O_DIR)/_public/ft/type_traits.hpp: ft/public/type_traits.hpp
 $(O_DIR)/_public/ft/utils.hpp: ft/public/utils.hpp
 $(O_DIR)/_public/ft_xml/XmlParser.hpp: ft_xml/public/XmlParser.hpp
 $(O_DIR)/_public/ft_xml/XmlTokenizer.hpp: ft_xml/public/XmlTokenizer.hpp
-$(O_DIR)/_public/ftce/Array.hpp: ftce/Array.hpp
-$(O_DIR)/_public/ftce/Array.tpp: ftce/Array.tpp
-$(O_DIR)/_public/ftce/math.hpp: ftce/math.hpp
 $(O_DIR)/_public/ftlua/KeysWrapper.hpp: ftlua/public/KeysWrapper.hpp
 $(O_DIR)/_public/ftlua/call.hpp: ftlua/public/call.hpp
 $(O_DIR)/_public/ftlua/conversions.hpp: ftlua/public/conversions.hpp
