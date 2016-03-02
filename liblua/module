@@ -1,0 +1,9 @@
+module liblua::liblua:
+	public include lua-5.3.1/src/
+
+	disable auto
+
+	put LINK_FLAGS -L?path?/lua-5.3.1/src -llua
+	put LIBS_RULES liblua
+
+	makefile import liblua.mk

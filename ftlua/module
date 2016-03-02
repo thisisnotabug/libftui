@@ -1,0 +1,7 @@
+module ftlua::ftlua:
+	public include public/
+
+	public require ft::ft
+	public require liblua::liblua
+
+	local BASE_FLAGS += -DRES_PATH='"$(abspath ?path?/res/)"'

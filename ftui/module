@@ -1,0 +1,10 @@
+module ftui::ftui:
+	public include public/
+
+	public require ft::ft
+	public require ft_xml::ft_xml
+	public require ftlua::ftlua
+	public require liblua::liblua
+
+	put LINK_FLAGS -lfreetype
+	local BASE_FLAGS += -DRES_PATH='"$(abspath ?path?/res/)"'
